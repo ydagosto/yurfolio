@@ -38,7 +38,7 @@ const TimeLine = () => (
     <Steps
       className="steps"
       style={{ height: "100vh", width: "100%", position: "sticky" }}
-      current={4}
+      current={2}
       labelPlacement="horizontal"
       items={items}
       direction="vertical"

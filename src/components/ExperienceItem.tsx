@@ -18,10 +18,20 @@ const tabListNoTitle = [
 
 const resumeData: any = {
   "GTM Data Science": {
-    startDate: "November 2021",
-    endDate: "Present",
-    position: "Senior Data Engineer",
+    positions: [
+      {
+        title: "Senior Data Engineer",
+        startDate: "March 2023",
+        endDate: "Present",
+      },
+      {
+        title: "Senior Data Engineer",
+        startDate: "November 2021",
+        endDate: "March 2023",
+      },
+    ],
     company: "LinkedIn",
+    location: "San Francisco, CA",
     bullets: [
       "Improved company-wide bookings and revenue source of truth data freshness by more than 50% (from 13 hours to 6 hours), enabling faster and more accurate decision-making for the business by successfully leading a complex migration (owning planning, design, prototyping, dev, comms with 5+ teams) of data transformation pipelines for SaaS booking data from on-prem HDFS systems to Azure utilizing ADLS, Databricks, Data Factory, and Great Expectations.",
       "Pioneered the use of Azure infrastructure for data transformations at LinkedIn by working closely with the platform team to address the gaps in the stack and create a highly performant and scalable data transformation platform to achieve freshness needs of 50% improvement.",
@@ -32,10 +42,20 @@ const resumeData: any = {
     ],
   },
   "Market Research": {
-    startDate: "November 2021",
-    endDate: "Present",
-    position: "Senior Data Engineer",
+    positions: [
+      {
+        title: "Technical Program Manager",
+        startDate: "March 2021",
+        endDate: "November 2021",
+      },
+      {
+        title: "Associate Technical Program Manager",
+        startDate: "July 2019",
+        endDate: "March 2021",
+      },
+    ],
     company: "LinkedIn",
+    location: "San Francisco, CA",
     bullets: [
       "Improved survey fielding efficiency (from 10 surveys/associate to 30+ surveys/associate) by developing an internal web application using Flask and Ember.js to assist with manual steps. These include generating audience tables for survey targeting and monitoring fielding stats as batches of emails are sent",
       "Developed Apache Goblin data integration applications to extract and ingest survey data from external APIs (Qualtrics, Decipher) to internal HDFS storage making it available company-wide for market analysis",
@@ -47,10 +67,20 @@ const resumeData: any = {
     ],
   },
   "Equity Research": {
-    startDate: "November 2021",
-    endDate: "Present",
-    position: "Senior Data Engineer",
-    company: "LinkedIn",
+    positions: [
+      {
+        title: "Senior Equity Research Associate",
+        startDate: "October 2018",
+        endDate: "July 2019",
+      },
+      {
+        title: "Equity Research Associate",
+        startDate: "July 2017",
+        endDate: "October 2018",
+      },
+    ],
+    company: "MScience",
+    location: "Portland, OR",
     bullets: [
       "Led initiative to modernize data pipeline by migrating from PostgreSQL to Apache Spark and python",
       "Streamlined and optimized the method to query and aggregate data, allowing it to process multiple parameters simultaneously and achieve substantial efficiency gains (from 9 hours per run to 1 hour)",
