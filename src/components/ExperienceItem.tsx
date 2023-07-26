@@ -95,35 +95,29 @@ const resumeData: any = {
   },
 };
 
-const ExperienceItem = () => {
-  const [activeTabKey2, setActiveTabKey2] =
-    useState<string>("GTM Data Science");
+const gridStyle: React.CSSProperties = {
+  width: "100%",
+};
 
-  const onTab2Change = (key: string) => {
-    setActiveTabKey2(key);
-  };
+const ExperienceItem = () => {
+  const resumeKeys = Object.keys(resumeData);
+
   return (
-    <Card
-      hoverable
-      style={{ width: 700 }}
-      tabList={tabListNoTitle}
-      activeTabKey={activeTabKey2}
-      onTabChange={onTab2Change}
-    >
-      <List
-        size="small"
-        bordered
-        dataSource={resumeData[activeTabKey2]["bullets"]}
-        renderItem={(item: any) => <List.Item>{item}</List.Item>}
-      />
-      {/* <ul>
-        {resumeData[activeTabKey2]["bullets"].map((item: string) => (
-          <li key={item}>
-            <span style={{ fontWeight: "bold" }}>{item.split(".")[0]}.</span>{" "}
-            {item.substring(item.indexOf(".") + 1)}
-          </li>
-        ))}
-      </ul> */}
+    <Card style={{ width: "100%" }}>
+      {resumeKeys.map((key: string) => (
+        <Card.Grid style={gridStyle}>
+          <ul>
+            {resumeData[key]["bullets"].map((item: string) => (
+              <li key={item}>
+                <span style={{ fontWeight: "bold" }}>
+                  {item.split(".")[0]}.
+                </span>{" "}
+                {item.substring(item.indexOf(".") + 1)}
+              </li>
+            ))}
+          </ul>
+        </Card.Grid>
+      ))}
     </Card>
   );
 };

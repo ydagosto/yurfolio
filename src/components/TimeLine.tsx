@@ -33,7 +33,11 @@ const items = [
 const TimeLine = () => (
   <div
     className="timeline-container"
-    style={{ width: "300px", alignItems: "flex-start" }}
+    style={{
+      display: "flex",
+      width: "300px",
+      alignItems: "flex-start",
+    }}
   >
     <Steps
       className="steps"

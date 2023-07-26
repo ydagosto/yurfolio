@@ -15,12 +15,24 @@ const Resume = () => (
       style={{
         display: "flex",
         flexDirection: "row",
-        alignItems: "center",
       }}
     >
-      <TimeLine />
-      <div>
-        <h1>Experience</h1>
+      <div
+        style={{
+          top: 60,
+          position: "sticky",
+          height: "100px",
+        }}
+      >
+        <TimeLine />
+      </div>
+      <div
+        style={{
+          width: "900px",
+          overflowY: "auto",
+          position: "relative",
+        }}
+      >
         <ExperienceItem />
       </div>
     </div>
