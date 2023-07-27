@@ -1,6 +1,8 @@
-import { Card, Row, Steps } from "antd";
+import { Typography } from "antd";
 import TimeLine from "../components/TimeLine";
 import ExperienceItem from "../components/ExperienceItem";
+
+const { Title } = Typography;
 
 const Resume = () => (
   <div
@@ -28,12 +30,14 @@ const Resume = () => (
       </div>
       <div
         style={{
-          width: "900px",
+          width: "800px",
           overflowY: "auto",
           position: "relative",
         }}
       >
+        <Title>Experience</Title>
         <ExperienceItem />
+        <Title>Education</Title>
       </div>
     </div>
   </div>

@@ -1,5 +1,4 @@
-import { Card, List } from "antd";
-import { useState } from "react";
+import { Card, Typography } from "antd";
 
 const tabListNoTitle = [
   {
@@ -25,13 +24,15 @@ const resumeData: any = {
         endDate: "Present",
       },
       {
-        title: "Senior Data Engineer",
+        title: "Data Engineer - Data Science",
         startDate: "November 2021",
         endDate: "March 2023",
       },
     ],
     company: "LinkedIn",
     location: "San Francisco, CA",
+    startDate: "November 2021",
+    endDate: "Present",
     bullets: [
       "Improved company-wide bookings and revenue source of truth data freshness by more than 50% (from 13 hours to 6 hours), enabling faster and more accurate decision-making for the business by successfully leading a complex migration (owning planning, design, prototyping, dev, comms with 5+ teams) of data transformation pipelines for SaaS booking data from on-prem HDFS systems to Azure utilizing ADLS, Databricks, Data Factory, and Great Expectations.",
       "Pioneered the use of Azure infrastructure for data transformations at LinkedIn by working closely with the platform team to address the gaps in the stack and create a highly performant and scalable data transformation platform to achieve freshness needs of 50% improvement.",
@@ -56,6 +57,8 @@ const resumeData: any = {
     ],
     company: "LinkedIn",
     location: "San Francisco, CA",
+    startDate: "July 2019",
+    endDate: "November 2021",
     bullets: [
       "Improved survey fielding efficiency (from 10 surveys/associate to 30+ surveys/associate) by developing an internal web application using Flask and Ember.js to assist with manual steps. These include generating audience tables for survey targeting and monitoring fielding stats as batches of emails are sent",
       "Developed Apache Goblin data integration applications to extract and ingest survey data from external APIs (Qualtrics, Decipher) to internal HDFS storage making it available company-wide for market analysis",
@@ -81,6 +84,8 @@ const resumeData: any = {
     ],
     company: "MScience",
     location: "Portland, OR",
+    startDate: "July 2017",
+    endDate: "July 2019",
     bullets: [
       "Led initiative to modernize data pipeline by migrating from PostgreSQL to Apache Spark and python",
       "Streamlined and optimized the method to query and aggregate data, allowing it to process multiple parameters simultaneously and achieve substantial efficiency gains (from 9 hours per run to 1 hour)",
@@ -95,6 +100,8 @@ const resumeData: any = {
   },
 };
 
+const { Title, Text, Paragraph } = Typography;
+
 const gridStyle: React.CSSProperties = {
   width: "100%",
 };
@@ -107,14 +114,81 @@ const ExperienceItem = () => {
       {resumeKeys.map((key: string) => (
         <Card.Grid style={gridStyle}>
           <ul>
-            {resumeData[key]["bullets"].map((item: string) => (
-              <li key={item}>
-                <span style={{ fontWeight: "bold" }}>
-                  {item.split(".")[0]}.
-                </span>{" "}
-                {item.substring(item.indexOf(".") + 1)}
-              </li>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                width: "100%",
+                alignItems: "center",
+              }}
+            >
+              <div>
+                <Title
+                  level={4}
+                  style={{
+                    marginRight: "auto",
+                    marginTop: "0",
+                    color: "#ff7429",
+                  }}
+                >
+                  {key} | {resumeData[key]["company"]} (
+                  {resumeData[key]["location"]})
+                </Title>
+              </div>
+              <Title
+                level={4}
+                type="secondary"
+                style={{ marginLeft: "auto", marginTop: "0", color: "#ff7429" }}
+              >
+                {resumeData[key]["startDate"]} - {resumeData[key]["endDate"]}
+              </Title>
+            </div>
+            {resumeData[key]["positions"].map((item: any) => (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  width: "100%",
+                  alignItems: "center",
+                }}
+              >
+                <Text
+                  strong
+                  style={{
+                    marginRight: "auto",
+                    marginTop: "0",
+                    color: "#ff7429",
+                    fontSize: "medium",
+                  }}
+                >
+                  {item["title"]}
+                </Text>
+                <Text
+                  type="secondary"
+                  style={{
+                    marginLeft: "auto",
+                    marginTop: "0",
+                    color: "#ff7429",
+                    fontSize: "medium",
+                  }}
+                >
+                  {item["startDate"]} - {item["endDate"]}
+                </Text>
+              </div>
             ))}
+            <br />
+            <Paragraph>
+              <ul>
+                {resumeData[key]["bullets"].map((item: string) => (
+                  <li key={item}>
+                    <span style={{ fontWeight: "bold" }}>
+                      {item.split(".")[0]}.
+                    </span>{" "}
+                    {item.substring(item.indexOf(".") + 1)}
+                  </li>
+                ))}
+              </ul>
+            </Paragraph>
           </ul>
         </Card.Grid>
       ))}
