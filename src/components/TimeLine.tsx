@@ -30,24 +30,28 @@ const items = [
     icon: <FaGraduationCap />,
   },
 ];
-const TimeLine = () => (
-  <div
-    className="timeline-container"
-    style={{
-      display: "flex",
-      width: "300px",
-      alignItems: "flex-start",
-    }}
-  >
-    <Steps
-      className="steps"
-      style={{ height: "100vh", width: "100%", position: "sticky" }}
-      current={2}
-      labelPlacement="horizontal"
-      items={items}
-      direction="vertical"
-    />
-  </div>
-);
+const TimeLine = (props: any) => {
+  const { timelinePointer } = props;
+  console.log(timelinePointer);
+  return (
+    <div
+      className="timeline-container"
+      style={{
+        display: "flex",
+        width: "270px",
+        alignItems: "flex-start",
+      }}
+    >
+      <Steps
+        className="steps"
+        style={{ height: "100vh", width: "100%", position: "sticky" }}
+        current={timelinePointer}
+        labelPlacement="horizontal"
+        items={items}
+        direction="vertical"
+      />
+    </div>
+  );
+};
 
 export default TimeLine;
