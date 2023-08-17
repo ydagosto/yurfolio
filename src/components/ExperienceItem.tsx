@@ -1,20 +1,4 @@
-import { Card, List } from "antd";
-import { useState } from "react";
-
-const tabListNoTitle = [
-  {
-    key: "GTM Data Science",
-    label: "GTM Data Science",
-  },
-  {
-    key: "Market Research",
-    label: "Market Research",
-  },
-  {
-    key: "Equity Research",
-    label: "Equity Research",
-  },
-];
+import { Card, Typography } from "antd";
 
 const resumeData: any = {
   "GTM Data Science": {
@@ -25,16 +9,18 @@ const resumeData: any = {
         endDate: "Present",
       },
       {
-        title: "Senior Data Engineer",
+        title: "Data Engineer - Data Science",
         startDate: "November 2021",
         endDate: "March 2023",
       },
     ],
     company: "LinkedIn",
     location: "San Francisco, CA",
+    startDate: "November 2021",
+    endDate: "Present",
     bullets: [
-      "Improved company-wide bookings and revenue source of truth data freshness by more than 50% (from 13 hours to 6 hours), enabling faster and more accurate decision-making for the business by successfully leading a complex migration (owning planning, design, prototyping, dev, comms with 5+ teams) of data transformation pipelines for SaaS booking data from on-prem HDFS systems to Azure utilizing ADLS, Databricks, Data Factory, and Great Expectations.",
-      "Pioneered the use of Azure infrastructure for data transformations at LinkedIn by working closely with the platform team to address the gaps in the stack and create a highly performant and scalable data transformation platform to achieve freshness needs of 50% improvement.",
+      "Improved company-wide bookings and revenue source of truth data freshness by more than 50% (from 13 hours to 6 hours). Thus enabling faster and more accurate decision-making for the business by successfully leading a complex migration (owning planning, design, prototyping, dev, comms with 5+ teams) of data transformation pipelines for SaaS booking data from on-prem HDFS systems to Azure utilizing ADLS, Databricks, Data Factory, and Great Expectations.",
+      "Pioneered the use of Azure infrastructure for data transformations at LinkedIn. Worked closely with the platform team to address the gaps in the stack and create a highly performant and scalable data transformation platform to achieve freshness needs of 50% improvement.",
       "Brought transparency and accountability to the relationship between data consumers and producers by creating a framework that views Data teams at LinkedIn as effective service providers with obligations towards internal consumers. The framework standardizes the use of uptime as a measure to establish data reliability Service Level Agreements (SLA) by quantifying and documenting in standard format (JSON) consumer expectations around Freshness, Data Quality, and Availability.",
       "Led the implementation of a scalable system to observe uptime for datasets against their reliability SLAs hourly. The system included easy contract onboarding in JSON format, dashboards to view real-time uptime and historical performance, alerting system to send emails or Slack messages to on-call channels in case of service-level breaches.",
       "Built an internal application (DataMeter) to gather and display all health (availability, quality, open Jira issues) and usage (daily queries, and users) information relative to datasets at LinkedIn. The project involved building an hourly Spark job to retrieve the data, mid-tier API endpoints to serve data, and building a React front-end layer to display the data. This tool has become the one-stop shop for data health monitoring for our greater team, helping on-call identify issues sooner and promoting trust in our datasets with our consumers.",
@@ -56,6 +42,8 @@ const resumeData: any = {
     ],
     company: "LinkedIn",
     location: "San Francisco, CA",
+    startDate: "July 2019",
+    endDate: "November 2021",
     bullets: [
       "Improved survey fielding efficiency (from 10 surveys/associate to 30+ surveys/associate) by developing an internal web application using Flask and Ember.js to assist with manual steps. These include generating audience tables for survey targeting and monitoring fielding stats as batches of emails are sent",
       "Developed Apache Goblin data integration applications to extract and ingest survey data from external APIs (Qualtrics, Decipher) to internal HDFS storage making it available company-wide for market analysis",
@@ -81,6 +69,8 @@ const resumeData: any = {
     ],
     company: "MScience",
     location: "Portland, OR",
+    startDate: "July 2017",
+    endDate: "July 2019",
     bullets: [
       "Led initiative to modernize data pipeline by migrating from PostgreSQL to Apache Spark and python",
       "Streamlined and optimized the method to query and aggregate data, allowing it to process multiple parameters simultaneously and achieve substantial efficiency gains (from 9 hours per run to 1 hour)",
@@ -95,35 +85,98 @@ const resumeData: any = {
   },
 };
 
-const ExperienceItem = () => {
-  const [activeTabKey2, setActiveTabKey2] =
-    useState<string>("GTM Data Science");
+const { Title, Text, Paragraph } = Typography;
 
-  const onTab2Change = (key: string) => {
-    setActiveTabKey2(key);
-  };
+const gridStyle: React.CSSProperties = {
+  width: "100%",
+};
+
+const ExperienceItem = () => {
+  const resumeKeys = Object.keys(resumeData);
+
   return (
-    <Card
-      hoverable
-      style={{ width: 700 }}
-      tabList={tabListNoTitle}
-      activeTabKey={activeTabKey2}
-      onTabChange={onTab2Change}
-    >
-      <List
-        size="small"
-        bordered
-        dataSource={resumeData[activeTabKey2]["bullets"]}
-        renderItem={(item: any) => <List.Item>{item}</List.Item>}
-      />
-      {/* <ul>
-        {resumeData[activeTabKey2]["bullets"].map((item: string) => (
-          <li key={item}>
-            <span style={{ fontWeight: "bold" }}>{item.split(".")[0]}.</span>{" "}
-            {item.substring(item.indexOf(".") + 1)}
-          </li>
-        ))}
-      </ul> */}
+    <Card style={{ width: "100%" }}>
+      {resumeKeys.map((key: string) => (
+        <Card.Grid style={gridStyle} key={key} className="company-position">
+          <div key={key}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                width: "100%",
+                alignItems: "center",
+              }}
+              key={key}
+            >
+              <div>
+                <Title
+                  level={5}
+                  style={{
+                    marginRight: "auto",
+                    marginTop: "0",
+                    color: "#ff7429",
+                  }}
+                >
+                  {key} | {resumeData[key]["company"]} (
+                  {resumeData[key]["location"]})
+                </Title>
+              </div>
+              <Title
+                level={5}
+                type="secondary"
+                style={{ marginLeft: "auto", marginTop: "0", color: "#ff7429" }}
+              >
+                {resumeData[key]["startDate"]} - {resumeData[key]["endDate"]}
+              </Title>
+            </div>
+            {resumeData[key]["positions"].map((item: any) => (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  width: "100%",
+                  alignItems: "center",
+                }}
+              >
+                <Text
+                  style={{
+                    marginRight: "auto",
+                    marginTop: "0",
+                    color: "#ff7429",
+                    fontSize: "medium",
+                  }}
+                >
+                  {item["title"]}
+                </Text>
+                <Text
+                  type="secondary"
+                  style={{
+                    marginLeft: "auto",
+                    marginTop: "0",
+                    color: "#ff7429",
+                    fontSize: "medium",
+                  }}
+                >
+                  {item["startDate"]} - {item["endDate"]}
+                </Text>
+              </div>
+            ))}
+            <br />
+            <Paragraph>
+              <ul>
+                {resumeData[key]["bullets"].map((item: string) => (
+                  <li key={item}>
+                    <span style={{ fontWeight: "bold" }}>
+                      {item.split(".")[0]}.
+                    </span>{" "}
+                    {item.substring(item.indexOf(".") + 1)}
+                  </li>
+                ))}
+              </ul>
+            </Paragraph>
+          </div>
+        </Card.Grid>
+      ))}
     </Card>
   );
 };
