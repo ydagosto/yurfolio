@@ -1,4 +1,5 @@
 import { Card, Typography, Image } from "antd";
+import "../styles.scss";
 
 const resumeData: any = {
   "GTM Data Science": {
@@ -25,7 +26,7 @@ const resumeData: any = {
       "Led the implementation of a scalable system to observe uptime for datasets against their reliability SLAs hourly. The system included easy contract onboarding in JSON format, dashboards to view real-time uptime and historical performance, alerting system to send emails or Slack messages to on-call channels in case of service-level breaches.",
       "Built an internal application (DataMeter) to gather and display all health (availability, quality, open Jira issues) and usage (daily queries, and users) information relative to datasets at LinkedIn. The project involved building an hourly Spark job to retrieve the data, mid-tier API endpoints to serve data, and building a React front-end layer to display the data. This tool has become the one-stop shop for data health monitoring for our greater team, helping on-call identify issues sooner and promoting trust in our datasets with our consumers.",
       "Led the socialization and adoption of DataMeter across the company, scaling from hundreds of datasets tracked in tens of thousands within a couple of months.",
-      "imagesource:https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTFhY3h3aXNtM3J5aDZxNW14NXdtd2w5eWRxdWcxdGYzbmt3cDhiaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aDAENghU4ww4iKW2rV/giphy.gif",
+      "image-source:https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTFhY3h3aXNtM3J5aDZxNW14NXdtd2w5eWRxdWcxdGYzbmt3cDhiaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aDAENghU4ww4iKW2rV/giphy.gif",
     ],
   },
   "Market Research": {
@@ -49,7 +50,7 @@ const resumeData: any = {
       "Significantly improved data readiness for NPS reports for the Flagship and Recruiter products from quarterly to monthly and then weekly by using Azkaban scheduler to orchestrate  Presto/Hive (SQL), and Spark (Scala) jobs and allowing our product managers and analysts to get closer to real-time feedback from users",
       "Developed Apache Gobblin data integration applications to extract and ingest survey data from external APIs (Qualtrics, Decipher) to internal HDFS storage making it available company-wide for market analysis",
       "Improved survey fielding efficiency (from 10 surveys/associate to 30+ surveys/associate) by developing an internal web application using Flask and Ember.js to assist with manual steps. These include generating audience tables for survey targeting and monitoring fielding stats as batches of emails are sent",
-      "imagesource:https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzV0d2ZjczB4MmR6YmdwOGlvd252YXhiYm5zOTJwazc0ZXFvbmR6dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/asUGoLQFIHxtK4W0I6/giphy.gif",
+      "image-source:https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzV0d2ZjczB4MmR6YmdwOGlvd252YXhiYm5zOTJwazc0ZXFvbmR6dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/asUGoLQFIHxtK4W0I6/giphy.gif",
       "Led an effort to standardize data operations across programs by redesigning specialized code to use modular and reusable components, reducing the amount of code to maintain and increasing its longevity",
       "Pioneered team’s adoption of new technologies (Spark) to fully automate the survey reporting workflow including multivariate weighting to ensure the survey sample accurately represents the demographic profile of the LinkedIn population, statistical significance for change in survey scores across periods and groups, waterfall analysis to show the drivers of change in NPS (Net Promoter Score) over time",
       "Built and maintained interactive Tableau dashboards for analysts to explore survey datasets (including Flagship NPS and CSAT for Recruiter products) on a self-serve basis and drive product decision making",
@@ -102,64 +103,21 @@ const ExperienceItem = () => {
       {resumeKeys.map((key: string) => (
         <Card.Grid style={gridStyle} key={key} className="company-position">
           <div key={key}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                width: "100%",
-                alignItems: "center",
-              }}
-              key={key}
-            >
+            <div className="experience-header" key={key}>
               <div>
-                <Title
-                  level={5}
-                  style={{
-                    marginRight: "auto",
-                    marginTop: "0",
-                    color: "#ff7429",
-                  }}
-                >
+                <Title level={5} className="company">
                   {key} | {resumeData[key]["company"]} (
                   {resumeData[key]["location"]})
                 </Title>
               </div>
-              <Title
-                level={5}
-                type="secondary"
-                style={{ marginLeft: "auto", marginTop: "0", color: "#ff7429" }}
-              >
+              <Title level={5} type="secondary" className="dates">
                 {resumeData[key]["startDate"]} - {resumeData[key]["endDate"]}
               </Title>
             </div>
             {resumeData[key]["positions"].map((item: any) => (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  width: "100%",
-                  alignItems: "center",
-                }}
-              >
-                <Text
-                  style={{
-                    marginRight: "auto",
-                    marginTop: "0",
-                    color: "#ff7429",
-                    fontSize: "medium",
-                  }}
-                >
-                  {item["title"]}
-                </Text>
-                <Text
-                  type="secondary"
-                  style={{
-                    marginLeft: "auto",
-                    marginTop: "0",
-                    color: "#ff7429",
-                    fontSize: "medium",
-                  }}
-                >
+              <div className="position">
+                <Text className="title">{item["title"]}</Text>
+                <Text className="dates" type="secondary">
                   {item["startDate"]} - {item["endDate"]}
                 </Text>
               </div>
@@ -168,27 +126,18 @@ const ExperienceItem = () => {
             <Paragraph>
               <ul>
                 {resumeData[key]["bullets"].map((item: string) =>
-                  item.startsWith("imagesource:") ? (
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        paddingTop: "15px",
-                        paddingBottom: "15px",
-                      }}
-                      key={item}
-                    >
+                  item.startsWith("image-source:") ? (
+                    <div className="resume-media" key={item}>
                       <Image
-                        src={item.substring("imagesource:".length)}
-                        alt="Company Logo"
-                        style={{ width: "100%", margin: 0 }}
+                        src={item.substring("image-source:".length)}
+                        alt="resume-media"
+                        className="image"
                         preview={false}
                       />
                     </div>
                   ) : (
                     <li key={item}>
-                      <span style={{ fontWeight: "bold" }}>
+                      <span className="first-sentence">
                         {item.split(".")[0]}.
                       </span>{" "}
                       {item.substring(item.indexOf(".") + 1)}
