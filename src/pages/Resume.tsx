@@ -2,6 +2,7 @@ import { Typography } from "antd";
 import TimeLine from "../components/TimeLine";
 import ExperienceItem from "../components/ExperienceItem";
 import { useEffect, useState } from "react";
+import "../styles.scss";
 
 const { Title } = Typography;
 
@@ -31,7 +32,6 @@ const Resume = () => {
       }
     });
     setTimelinePointer(maxCurrentVisible);
-    console.log(timelinePointer);
   };
 
   useEffect(() => {
@@ -46,36 +46,12 @@ const Resume = () => {
   }, [loaded]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "60px 0 0",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
-        <div
-          style={{
-            top: 60,
-            position: "sticky",
-            height: "100px",
-          }}
-        >
+    <div className="resume-container">
+      <div className="resume">
+        <div className="sidebar">
           <TimeLine timelinePointer={timelinePointer} />
         </div>
-        <div
-          style={{
-            width: "700px",
-            overflowY: "auto",
-            position: "relative",
-          }}
-        >
+        <div className="main-body">
           <Title>Experience</Title>
           <ExperienceItem />
           <Title>Education</Title>

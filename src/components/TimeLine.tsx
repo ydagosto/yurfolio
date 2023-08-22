@@ -1,6 +1,7 @@
 import { Card, Steps } from "antd";
 import { LinkedinOutlined, LineChartOutlined } from "@ant-design/icons";
 import { FaGraduationCap, FaCircle } from "react-icons/fa";
+import "../styles.scss";
 
 const items = [
   {
@@ -34,17 +35,9 @@ const TimeLine = (props: any) => {
   const { timelinePointer } = props;
   console.log(timelinePointer);
   return (
-    <div
-      className="timeline-container"
-      style={{
-        display: "flex",
-        width: "270px",
-        alignItems: "flex-start",
-      }}
-    >
+    <div className="timeline-container">
       <Steps
         className="steps"
-        style={{ height: "100vh", width: "100%", position: "sticky" }}
         current={timelinePointer}
         labelPlacement="horizontal"
         items={items}
