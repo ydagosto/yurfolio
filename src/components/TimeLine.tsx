@@ -2,6 +2,7 @@ import { Card, Steps } from "antd";
 import { LinkedinOutlined, LineChartOutlined } from "@ant-design/icons";
 import { FaGraduationCap, FaCircle } from "react-icons/fa";
 import "../styles.scss";
+import { useState, useEffect } from "react";
 
 const items = [
   {
@@ -33,7 +34,24 @@ const items = [
 ];
 const TimeLine = (props: any) => {
   const { timelinePointer } = props;
-  console.log(timelinePointer);
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const timelineType = screenWidth < 768 ? "inline" : "default";
+  const timelineDirection = screenWidth < 768 ? "horizontal" : "vertical";
+
   return (
     <div className="timeline-container">
       <Steps
@@ -41,8 +59,8 @@ const TimeLine = (props: any) => {
         current={timelinePointer}
         labelPlacement="horizontal"
         items={items}
-        direction="vertical"
-        responsive={false}
+        direction={timelineDirection}
+        type={timelineType}
       />
     </div>
   );
