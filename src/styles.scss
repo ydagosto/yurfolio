@@ -58,7 +58,7 @@
                     display: flex;
                     flex-direction: row;
                     width: 100%;
-                    @media (max-width: 768px) {
+                    @media (max-width: 975px) {
                         flex-direction: column;
                     }
                     .company{
@@ -76,7 +76,7 @@
                         margin-top: 0;
                         color: #ff7429;
                         font-size: large;
-                        @media (max-width: 768px) {
+                        @media (max-width: 975px) {
                             margin-left: 0;
                             font-size: 14px;
                         }
