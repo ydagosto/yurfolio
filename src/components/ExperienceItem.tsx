@@ -10,7 +10,7 @@ const resumeData: any = {
         endDate: "Present",
       },
       {
-        title: "Data Engineer - Data Science",
+        title: "Data Engineer",
         startDate: "November 2021",
         endDate: "March 2023",
       },
