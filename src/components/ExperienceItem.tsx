@@ -116,14 +116,12 @@ const ExperienceItem = () => {
             </div>
             {resumeData[key]["positions"].map((item: any) => (
               <div className="position">
-                <Text className="title">{item["title"]}</Text>
-                <Text className="dates" type="secondary">
-                  {item["startDate"]} - {item["endDate"]}
+                <Text className="title">
+                  {item["title"]} | {item["startDate"]} - {item["endDate"]}
                 </Text>
               </div>
             ))}
-            <br />
-            <Paragraph>
+            <Paragraph className="title-description">
               <ul>
                 {resumeData[key]["bullets"].map((item: string) =>
                   item.startsWith("image-source:") ? (
