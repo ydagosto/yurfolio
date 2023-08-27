@@ -52,9 +52,9 @@ const Resume = () => {
           <TimeLine timelinePointer={timelinePointer} />
         </div>
         <div className="main-body">
-          <Title>Experience</Title>
+          <Title className="resume-header">Experience</Title>
           <ExperienceItem />
-          <Title>Education</Title>
+          <Title className="resume-header">Education</Title>
         </div>
       </div>
     </div>
