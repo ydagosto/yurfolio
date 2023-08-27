@@ -7,8 +7,8 @@
         display: flex;
         flex-direction: row;
         .sidebar{
-            top: 60px;
             position: sticky;
+            top: 60px;
             height: 100px;
             color: #ff7429;
             @media (max-width: 768px) {
@@ -17,11 +17,9 @@
             .timeline-container{
                 display: flex;
                 width: 270px;
-                align-items: flex-start;
                 .steps{
                     height: 100vh;
                     width: 100%;
-                    position: sticky;
                 }
             }
         }
@@ -33,23 +31,35 @@
             padding-right: 0px;
             @media (max-width: 975px) {
                 width: 100%;
-                padding-left: 15px;
-                padding-right: 15px;
+                padding-left: 5px;
+                padding-right: 5px;
             }
             .company-position{
+                @media (max-width: 768px) {
+                    padding: 5px;
+                }
                 .experience-header{
                     display: flex;
                     flex-direction: row;
                     width: 100%;
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                    }
                     .company{
-                            margin-right: auto;
-                            margin-top: 0;
-                            color: #ff7429;
+                        margin-right: auto;
+                        margin-top: 0;
+                        color: #ff7429;
+                        @media (max-width: 768px) {
+                            margin-bottom: 0;
+                        }
                     }
                     .dates{
                         margin-left: auto;
                         margin-top: 0;
-                        color: #ff7429
+                        color: #ff7429;
+                        @media (max-width: 768px) {
+                            margin-left: 0;
+                        }
                     }
                 }
                 .position{
@@ -62,7 +72,16 @@
                         margin-top: 0;
                         color: #ff7429;
                         font-size: medium;
+                        @media (max-width: 768px) {
+                            font-size: small;
                     }
+                    }
+                    .dates{
+                        margin-left: auto;
+                        margin-top: 0;
+                        color: #ff7429;
+                        font-size: medium;
+                        }
                     .dates{
                         margin-left: auto;
                         margin-top: 0;
@@ -84,7 +103,9 @@
                 .first-sentence{ 
                     font-weight: bold;
                 }
-                
+                .title-description {
+                    padding-top: 10px;                        
+                }
             }
         }
     }

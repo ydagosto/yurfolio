@@ -42,6 +42,7 @@ const TimeLine = (props: any) => {
         labelPlacement="horizontal"
         items={items}
         direction="vertical"
+        responsive={false}
       />
     </div>
   );
