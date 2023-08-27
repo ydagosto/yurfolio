@@ -1,4 +1,4 @@
-import { Card, Typography, Image } from "antd";
+import { Typography, Image } from "antd";
 import "../styles.scss";
 
 const resumeData: any = {
@@ -91,17 +91,13 @@ const resumeData: any = {
 
 const { Title, Text, Paragraph } = Typography;
 
-const gridStyle: React.CSSProperties = {
-  width: "100%",
-};
-
 const ExperienceItem = () => {
   const resumeKeys = Object.keys(resumeData);
 
   return (
-    <Card style={{ width: "100%" }}>
+    <>
       {resumeKeys.map((key: string) => (
-        <Card.Grid style={gridStyle} key={key} className="company-position">
+        <div key={key} className="company-position">
           <div key={key}>
             <div className="experience-header" key={key}>
               <div>
@@ -145,9 +141,9 @@ const ExperienceItem = () => {
               </ul>
             </Paragraph>
           </div>
-        </Card.Grid>
+        </div>
       ))}
-    </Card>
+    </>
   );
 };
 
