@@ -15,7 +15,7 @@
         }
         .sidebar{
             position: sticky;
-            top: 20px;
+            top: 95px;
             height: 100%;
             color: #ff7429;
             z-index: 1;
@@ -59,7 +59,7 @@
             .resume-header{
                 @media (max-width: 768px) {
                     padding: 15px;
-                    margin: 0px;
+                    margin: 0;
                 }
             }
             .company-position{
