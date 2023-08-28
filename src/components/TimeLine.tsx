@@ -54,7 +54,7 @@ const TimeLine = (props: any) => {
 
       if (sectionElement) {
         const yOffset =
-          sectionElement.getBoundingClientRect().top + window.pageYOffset;
+          sectionElement.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({ top: yOffset - topSpace, behavior: "smooth" });
       }
     }
