@@ -1,4 +1,4 @@
-import { Card, Empty, Steps } from "antd";
+import { Steps } from "antd";
 import { LinkedinOutlined, LineChartOutlined } from "@ant-design/icons";
 import { FaGraduationCap, FaCircle } from "react-icons/fa";
 import "../styles.scss";
@@ -11,19 +11,16 @@ const items = [
   },
   {
     title: "LinkedIn - GTM Data Science",
-    // subTitle: "GTM Data Science",
     description: "November 2021",
     icon: <LinkedinOutlined />,
   },
   {
     title: "LinkedIn - Market Research",
-    // subTitle: "Market Research",
     description: "July 2019",
     icon: <LinkedinOutlined />,
   },
   {
     title: "MScience - Equity Research",
-    // subTitle: "Equity Research",
     description: "April 2017",
     icon: <LineChartOutlined />,
   },
