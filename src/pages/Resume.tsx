@@ -11,7 +11,7 @@ const Resume = () => {
     document.querySelectorAll(".company-position")
   ).map((h1) => h1.textContent);
 
-  const [timelinePointer, setTimelinePointer] = useState(1);
+  const [timelinePointer, setTimelinePointer] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
   const handleScroll = () => {
@@ -28,7 +28,7 @@ const Resume = () => {
         (rect.top <= 0 && rect.bottom >= pageTurn);
 
       if (isVisible) {
-        maxCurrentVisible = 1 + infoArray.indexOf(card.textContent);
+        maxCurrentVisible = infoArray.indexOf(card.textContent);
       }
     });
     setTimelinePointer(maxCurrentVisible);

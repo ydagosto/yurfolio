@@ -6,10 +6,6 @@ import { useState, useEffect } from "react";
 
 const items = [
   {
-    title: "Present",
-    icon: <FaCircle />,
-  },
-  {
     title: "LinkedIn - GTM Data Science",
     description: "November 2021",
     icon: <LinkedinOutlined />,
@@ -58,7 +54,7 @@ const TimeLine = (props: any) => {
     const sectionElements = document.getElementsByClassName("company-position");
 
     if (sectionElements.length > 0) {
-      const sectionElement = sectionElements[value - 1];
+      const sectionElement = sectionElements[value];
 
       if (sectionElement) {
         const yOffset =
