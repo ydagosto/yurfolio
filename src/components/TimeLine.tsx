@@ -47,10 +47,6 @@ const TimeLine = (props: any) => {
   const topSpace = screenWidth < 768 ? 110 : 20;
 
   const onChange = (value: number) => {
-    if (value === 0) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
     const sectionElements = document.getElementsByClassName("company-position");
 
     if (sectionElements.length > 0) {
