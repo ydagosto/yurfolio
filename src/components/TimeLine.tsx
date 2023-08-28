@@ -7,21 +7,22 @@ import { useState, useEffect } from "react";
 const items = [
   {
     title: "LinkedIn - GTM Data Science",
-    description: "November 2021",
+    description: "Present - November 2021",
     icon: <LinkedinOutlined />,
   },
   {
     title: "LinkedIn - Market Research",
-    description: "July 2019",
+    description: "November 2021 - July 2019",
     icon: <LinkedinOutlined />,
   },
   {
     title: "MScience - Equity Research",
-    description: "April 2017",
+    description: "July 2019 - April 2017",
     icon: <LineChartOutlined />,
   },
   {
     title: "University of Oregon",
+    description: "August 2012 - June 2017",
     icon: <FaGraduationCap />,
   },
 ];
