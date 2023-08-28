@@ -1,4 +1,4 @@
-import { Card, Steps } from "antd";
+import { Card, Empty, Steps } from "antd";
 import { LinkedinOutlined, LineChartOutlined } from "@ant-design/icons";
 import { FaGraduationCap, FaCircle } from "react-icons/fa";
 import "../styles.scss";
@@ -10,20 +10,20 @@ const items = [
     icon: <FaCircle />,
   },
   {
-    title: "LinkedIn",
-    subTitle: "GTM Data Science",
+    title: "LinkedIn - GTM Data Science",
+    // subTitle: "GTM Data Science",
     description: "November 2021",
     icon: <LinkedinOutlined />,
   },
   {
-    title: "LinkedIn",
-    subTitle: "Market Research",
+    title: "LinkedIn - Market Research",
+    // subTitle: "Market Research",
     description: "July 2019",
     icon: <LinkedinOutlined />,
   },
   {
-    title: "MScience",
-    subTitle: "Equity Research",
+    title: "MScience - Equity Research",
+    // subTitle: "Equity Research",
     description: "April 2017",
     icon: <LineChartOutlined />,
   },
@@ -51,6 +51,25 @@ const TimeLine = (props: any) => {
 
   const timelineType = screenWidth < 768 ? "inline" : "default";
   const timelineDirection = screenWidth < 768 ? "horizontal" : "vertical";
+  const topSpace = screenWidth < 768 ? 110 : 20;
+
+  const onChange = (value: number) => {
+    if (value === 0) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    const sectionElements = document.getElementsByClassName("company-position");
+
+    if (sectionElements.length > 0) {
+      const sectionElement = sectionElements[value - 1];
+
+      if (sectionElement) {
+        const yOffset =
+          sectionElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: yOffset - topSpace, behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <div className="timeline-container">
@@ -61,6 +80,7 @@ const TimeLine = (props: any) => {
         items={items}
         direction={timelineDirection}
         type={timelineType}
+        onChange={onChange}
       />
     </div>
   );
