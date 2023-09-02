@@ -1,4 +1,4 @@
-import { Typography, Modal, Button, FloatButton } from "antd";
+import { Typography, Modal, Button } from "antd";
 import { Document, Page, pdfjs } from "react-pdf";
 
 import "react-pdf/dist/esm/Page/TextLayer.css";
@@ -6,11 +6,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 import "../styles.scss";
 import { useState } from "react";
-import {
-  FaArrowAltCircleLeft,
-  FaArrowLeft,
-  FaArrowRight,
-} from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const { Paragraph, Title } = Typography;
 

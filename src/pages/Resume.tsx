@@ -107,7 +107,7 @@ const Resume = () => {
     let maxCurrentVisible: any;
     const htmlElements = document.querySelectorAll(".resume-section");
     console.log(htmlElements);
-    const pageTurn = window.innerHeight / 2;
+    const pageTurn = window.innerHeight - window.innerHeight / 6;
 
     htmlElements.forEach((card) => {
       const rect = card.getBoundingClientRect();
