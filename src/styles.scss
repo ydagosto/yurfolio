@@ -30,12 +30,13 @@
             .timeline-container{
                 display: flex;
                 width: 280px;
+                height: calc(100vh - 95px);
                 @media (max-width: 768px) {
+                    height: 100%;
                     align-items: center;
                     width: 100%;
                 }
                 .steps{
-                    height: 100vh;
                     width: 100%;
                     @media (max-width: 768px) {
                         width: 100%;
@@ -62,11 +63,39 @@
                     margin: 0;
                 }
             }
-            .company-position{
+            .resume-section{
                 width: 100%;
                 @media (max-width: 768px) {
                     padding: 15px;
                     box-sizing: border-box;
+                }
+                .education-header{
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    @media (max-width: 975px) {
+                        flex-direction: column;
+                    }
+                    .company{
+                        margin-right: auto;
+                        margin-top: 0;
+                        color: #ff7429;
+                        font-size: large;
+                        @media (max-width: 768px) {
+                            margin-bottom: 0;
+                            font-size: 14px;
+                        }
+                    }
+                    .dates{
+                        margin-left: auto;
+                        margin-top: 0;
+                        color: #ff7429;
+                        font-size: large;
+                        @media (max-width: 975px) {
+                            margin-left: 0;
+                            font-size: 14px;
+                        }
+                    }
                 }
                 .experience-header{
                     display: flex;
@@ -121,11 +150,23 @@
                         width: 100%;
                     }
                 }
+                ul{
+                    list-style-type: disc;
+                }
                 .first-sentence{ 
                     font-weight: bold;
                 }
                 .title-description {
                     padding-top: 10px;                        
+                }
+                .education-description {
+                    padding-top: 0px;
+                    padding-bottom: 100px;
+                    .link-button {
+                        padding: 0px;
+                        margin: 0px;
+                        height: 12px;
+                    }              
                 }
             }
         }

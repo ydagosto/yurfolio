@@ -27,28 +27,14 @@ const items = [
   },
 ];
 const TimeLine = (props: any) => {
-  const { timelinePointer } = props;
-
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const { timelinePointer, screenWidth } = props;
 
   const timelineType = screenWidth < 768 ? "inline" : "default";
   const timelineDirection = screenWidth < 768 ? "horizontal" : "vertical";
   const topSpace = screenWidth < 768 ? 110 : 20;
 
   const onChange = (value: number) => {
-    const sectionElements = document.getElementsByClassName("company-position");
+    const sectionElements = document.getElementsByClassName("resume-section");
 
     if (sectionElements.length > 0) {
       const sectionElement = sectionElements[value];
