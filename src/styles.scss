@@ -1,3 +1,6 @@
+.ant-tooltip{
+    display: none;
+}
 .resume-container{
     display: flex;
     flex-direction: column;
@@ -15,22 +18,39 @@
         }
         .sidebar{
             position: sticky;
-            top: 95px;
+            top: 60px;
             height: 100%;
-            color: #ff7429;
             z-index: 1;
             background-color: white;
             @media (max-width: 768px) {
-                top: 0px;
+                top: -170px;
                 padding-top: 20px;
                 align-items: center;
-                padding-left: 30px;
-                padding-right: 30px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .tag-line{
+                padding-bottom: 50px;
+                padding-left: 5px;
+                @media (max-width: 768px) {    
+                    padding-left: 0px;
+                    padding-bottom: 30px;
+                }
+                .title{
+                    margin-right: auto;
+                    margin-top: 0;
+                    color: #ff7429;
+                    font-size: large;
+                    margin-bottom: 0;
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                    }
+                }
             }
             .timeline-container{
                 display: flex;
                 width: 280px;
-                height: calc(100vh - 95px);
+                height: calc(100vh - 270px);
                 @media (max-width: 768px) {
                     height: 100%;
                     align-items: center;
@@ -61,6 +81,12 @@
                 @media (max-width: 768px) {
                     padding: 15px;
                     margin: 0;
+                }
+            }
+            .about-me-text{
+                @media (max-width: 768px) {
+                padding-left: 15px;
+                padding-right: 15px;
                 }
             }
             .resume-section{
