@@ -12,7 +12,7 @@ const ExperienceItem = (props: any) => {
         <div className="experience-header" key={positionKey}>
           <div>
             <Title level={5} className="company">
-              {data["company"]} ({data["location"]})
+              {positionKey} | {data["company"]} ({data["location"]})
             </Title>
           </div>
           <Title level={5} type="secondary" className="dates">

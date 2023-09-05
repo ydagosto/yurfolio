@@ -30,11 +30,15 @@
                 padding-right: 15px;
             }
             .tag-line{
-                padding-bottom: 50px;
+                padding-bottom: 60px;
                 padding-left: 5px;
                 @media (max-width: 768px) {    
                     padding-left: 0px;
                     padding-bottom: 30px;
+                }
+                .full-name{
+                    padding-bottom: 0px !important;
+                    margin-bottom: 5px;
                 }
                 .title{
                     margin-right: auto;
@@ -78,6 +82,8 @@
                 width: 100%;
             }
             .resume-header{
+                padding-bottom: 0px !important;
+                margin-bottom: 5px;
                 @media (max-width: 768px) {
                     padding: 15px;
                     margin: 0;
@@ -85,8 +91,7 @@
             }
             .about-me-text{
                 @media (max-width: 768px) {
-                padding-left: 15px;
-                padding-right: 15px;
+                padding: 15px;
                 }
             }
             .resume-section{
