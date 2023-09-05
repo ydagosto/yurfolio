@@ -4,8 +4,9 @@ import ExperienceItem from "../components/ExperienceItem";
 import { useEffect, useState } from "react";
 import "../styles.scss";
 import EducationItem from "../components/EducationItem";
+import TagLine from "../components/TagLine";
 
-const { Title } = Typography;
+const { Title, Paragraph } = Typography;
 
 const experienceData: any = {
   "GTM Data Science": {
@@ -155,17 +156,33 @@ const Resume = () => {
     <div className="resume-container">
       <div className="resume">
         <div className="sidebar">
+          <TagLine />
           <TimeLine
             timelinePointer={timelinePointer}
             screenWidth={screenWidth}
           />
         </div>
         <div className="main-body">
-          <Title className="resume-header">Experience</Title>
+          <Title level={2} className="resume-header">
+            About Me
+          </Title>
+          <Paragraph className="about-me-text">
+            I'm a Data Engineer with experience leveraging big data in both a
+            startup environment and a large-scale business. Currently building
+            scalable and automated data ETL and visualization solutions used to
+            drive decisions at all levels, and previously conducting consumer
+            data analysis to address near-term concerns and thematic trends in
+            the e-Commerce sector.
+          </Paragraph>
+          <Title level={2} className="resume-header">
+            Experience
+          </Title>
           {resumeKeys.map((key: string) => (
             <ExperienceItem positionKey={key} data={experienceData[key]} />
           ))}
-          <Title className="resume-header">Education</Title>
+          <Title level={2} className="resume-header">
+            Education
+          </Title>
           <EducationItem screenWidth={screenWidth} />
         </div>
       </div>
