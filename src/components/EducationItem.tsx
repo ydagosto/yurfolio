@@ -53,7 +53,8 @@ const EducationItem = (props: any) => {
         <Paragraph className="education-description">
           Bachelor of Science in Economics and Business Administration
           <ul>
-            <li>Summa Cum Laude: Cumulative GPA: 4.00</li>
+            <li>Summa Cum Laude</li>
+            <li>Cumulative GPA: 4.00</li>
             <li>Departmental Honors - Economics</li>
             <li>
               {"Economics Honors Thesis: "}

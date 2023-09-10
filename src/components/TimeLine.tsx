@@ -31,7 +31,7 @@ const TimeLine = (props: any) => {
 
   const timelineType = screenWidth < 768 ? "inline" : "default";
   const timelineDirection = screenWidth < 768 ? "horizontal" : "vertical";
-  const topSpace = screenWidth < 768 ? 110 : 20;
+  const topSpace = screenWidth < 768 ? 110 : 130;
 
   const onChange = (value: number) => {
     const sectionElements = document.getElementsByClassName("resume-section");

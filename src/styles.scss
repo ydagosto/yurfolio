@@ -192,7 +192,10 @@
                 }
                 .education-description {
                     padding-top: 0px;
-                    padding-bottom: 100px;
+                    padding-bottom: 200px;
+                    @media (max-width: 768px) {
+                        padding-bottom: 100px;
+                    }
                     .link-button {
                         padding: 0px;
                         margin: 0px;

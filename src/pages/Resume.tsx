@@ -108,7 +108,7 @@ const Resume = () => {
     let maxCurrentVisible: any;
     const htmlElements = document.querySelectorAll(".resume-section");
     console.log(htmlElements);
-    const pageTurn = window.innerHeight - window.innerHeight / 6;
+    const pageTurn = window.innerHeight - window.innerHeight / 3;
 
     htmlElements.forEach((card) => {
       const rect = card.getBoundingClientRect();
@@ -163,27 +163,33 @@ const Resume = () => {
           />
         </div>
         <div className="main-body">
-          <Title level={2} className="resume-header">
-            About Me
-          </Title>
-          <Paragraph className="about-me-text">
-            I'm a Data Engineer with experience leveraging big data in both a
-            startup environment and a large-scale business. Currently building
-            scalable and automated data ETL and visualization solutions used to
-            drive decisions at all levels, and previously conducting consumer
-            data analysis to address near-term concerns and thematic trends in
-            the e-Commerce sector.
-          </Paragraph>
-          <Title level={2} className="resume-header">
-            Experience
-          </Title>
-          {resumeKeys.map((key: string) => (
-            <ExperienceItem positionKey={key} data={experienceData[key]} />
-          ))}
-          <Title level={2} className="resume-header">
-            Education
-          </Title>
-          <EducationItem screenWidth={screenWidth} />
+          <div>
+            <Title level={2} className="resume-header">
+              About Me
+            </Title>
+            <Paragraph className="about-me-text">
+              I'm a Data Engineer with experience leveraging big data in both a
+              startup environment and a large-scale business. Currently building
+              scalable and automated data ETL and visualization solutions used
+              to drive decisions at all levels, and previously conducting
+              consumer data analysis to address near-term concerns and thematic
+              trends in the e-Commerce sector.
+            </Paragraph>
+          </div>
+          <div>
+            <Title level={2} className="resume-header">
+              Experience
+            </Title>
+            {resumeKeys.map((key: string) => (
+              <ExperienceItem positionKey={key} data={experienceData[key]} />
+            ))}
+          </div>
+          <div>
+            <Title level={2} className="resume-header">
+              Education
+            </Title>
+            <EducationItem screenWidth={screenWidth} />
+          </div>
         </div>
       </div>
     </div>
