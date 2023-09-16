@@ -1,7 +1,32 @@
-.ant-tooltip{
-    display: none;
+.home-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f9f9;
+    height: 100vh;
+    .home-page{
+        position: relative;
+        padding-top: 60px;
+        width: 900px;
+        height: 100%;
+        @media (max-width: 975px) {
+            width: 100%;
+            padding-top: 0px;
+        }
+        .header{
+            font-family: "Major Mono Display Regular";
+            font-size: 72px;
+            @media (max-width: 975px) {
+                font-size: 56px;
+                padding: 15px;
+                margin-top: 20px;
+            }
+        }
+    }
 }
+
 .resume-container{
+    background-color: #f3f9f9;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +46,7 @@
             top: 60px;
             height: 100%;
             z-index: 1;
-            background-color: white;
+            background-color: #f3f9f9;
             @media (max-width: 768px) {
                 top: -170px;
                 padding-top: 20px;
@@ -205,4 +230,8 @@
             }
         }
     }
+}
+
+.ant-tooltip{
+    display: none;
 }

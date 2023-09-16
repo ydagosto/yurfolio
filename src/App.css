@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "Anton";
+  src: url("https://db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.eot");
+  src: url("https://db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.svg#Anton")format("svg");
+}
+
+@font-face {
+  font-family: "Major Mono Display Regular";
+  src: url("https://db.onlinewebfonts.com/t/f04ca116c6a8428796213da3aee2f29e.eot");
+  src: url("https://db.onlinewebfonts.com/t/f04ca116c6a8428796213da3aee2f29e.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/f04ca116c6a8428796213da3aee2f29e.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/f04ca116c6a8428796213da3aee2f29e.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/f04ca116c6a8428796213da3aee2f29e.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/f04ca116c6a8428796213da3aee2f29e.svg#Major Mono Display Regular")format("svg");
+}
