@@ -12,6 +12,7 @@
         @media (max-width: 975px) {
             width: 100%;
             padding-top: 0px;
+            overflow-x: hidden;
         }
         .header{
             font-family: "Major Mono Display Regular";
@@ -20,6 +21,14 @@
                 font-size: 56px;
                 padding: 15px;
                 margin-top: 20px;
+            }
+        }
+        .nav-container{
+            position: absolute;
+            bottom: 40px; 
+            right: 0px;
+            @media (max-width: 975px) {
+                bottom: 60px;
             }
         }
     }

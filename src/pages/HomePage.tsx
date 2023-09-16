@@ -6,7 +6,7 @@ const HomePage = () => {
     <div className="home-body">
       <div className="home-page">
         <p className="header">I AM YURI</p>
-        <div style={{ position: "absolute", bottom: 40, right: 0 }}>
+        <div className="nav-container">
           <SkeuomorphButton label={"Projects"} dir={"/"} />
           <SkeuomorphButton label={"Resume"} dir={"/resume"} />
           <SkeuomorphButton label={"About Me"} dir={"/"} />
