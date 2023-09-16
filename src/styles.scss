@@ -4,6 +4,9 @@
     align-items: center;
     background-color: #f3f9f9;
     height: 100vh;
+    @media (max-width: 975px) {
+        height: 100%;
+    }
     .home-page{
         position: relative;
         padding-top: 60px;
@@ -12,7 +15,6 @@
         @media (max-width: 975px) {
             width: 100%;
             padding-top: 0px;
-            overflow-x: hidden;
         }
         .header{
             font-family: "Major Mono Display Regular";
