@@ -9,7 +9,7 @@ const SkeuomorphSkill = (props: any) => {
     <div className={cx("skeuomorph-button-container")}>
       <button title={label} disabled={true} className={cx("skeuomorph-button")}>
         {logo}
-        <span className={cx("tooltiptext")}>{label}</span>
+        {/* <span className={cx("tooltiptext")}>{label}</span> */}
       </button>
     </div>
   );
