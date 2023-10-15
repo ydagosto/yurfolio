@@ -6,8 +6,8 @@ const Blob = () => {
   const meshRef: any = useRef();
   // Subscribe this component to the render-loop, rotate the mesh every frame
   useFrame((state, delta) => {
-    meshRef.current.rotation.x += delta;
-    meshRef.current.rotation.y += delta;
+    meshRef.current.rotation.x += delta / 2;
+    meshRef.current.rotation.y += delta / 2;
   });
   // Return view, these are regular three.js elements expressed in JSX
   return (
