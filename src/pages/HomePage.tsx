@@ -22,7 +22,7 @@ const HomePage = () => {
         <div className="nav-container">
           <SkeuomorphButton label={"Projects"} dir={"/"} />
           <SkeuomorphButton label={"Resume"} dir={"/resume"} />
-          <SkeuomorphButton label={"About Me"} dir={"/"} />
+          <SkeuomorphButton label={"About Me"} dir={"/aboutme"} />
         </div>
       </div>
     </div>
