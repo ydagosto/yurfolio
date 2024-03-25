@@ -1162,7 +1162,7 @@
   "resolved" "https://registry.npmjs.org/@babel/regjsgen/-/regjsgen-0.8.0.tgz"
   "version" "0.8.0"
 
-"@babel/runtime@^7.10.1", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.20.0", "@babel/runtime@^7.20.13", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.22.5", "@babel/runtime@^7.22.6", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.1", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.20.0", "@babel/runtime@^7.20.13", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.22.5", "@babel/runtime@^7.22.6", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   "integrity" "sha512-wDb5pWm4WDdF6LFUde3Jl8WzPA+3ZbxYqkC6xAXuD3irdEHN1k0NfTRrJD8ZD378SJ61miMLCqIOXYhd8x+AJQ=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.22.6.tgz"
   "version" "7.22.6"
@@ -2486,6 +2486,11 @@
   "version" "3.5.10"
   dependencies:
     "@types/node" "*"
+
+"@types/chroma-js@^2.4.3":
+  "integrity" "sha512-/DTccpHTaKomqussrn+ciEvfW4k6NAHzNzs/sts1TCqg333qNxOhy8TNIoQCmbGG3Tl8KdEhkGAssb1n3mTXiQ=="
+  "resolved" "https://registry.npmjs.org/@types/chroma-js/-/chroma-js-2.4.4.tgz"
+  "version" "2.4.4"
 
 "@types/connect-history-api-fallback@^1.3.5":
   "integrity" "sha512-4x5FkPpLipqwthjPsF7ZRbOv3uoLUFkTA9G9v583qi4pACvq0uTELrB8OLUzPWUI4IJIyvM85vzkV1nyiI2Lig=="
@@ -4010,6 +4015,11 @@
   "resolved" "https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz"
   "version" "2.0.0"
 
+"chroma-js@^2.4.2":
+  "integrity" "sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A=="
+  "resolved" "https://registry.npmjs.org/chroma-js/-/chroma-js-2.4.2.tgz"
+  "version" "2.4.2"
+
 "chrome-trace-event@^1.0.2":
   "integrity" "sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg=="
   "resolved" "https://registry.npmjs.org/chrome-trace-event/-/chrome-trace-event-1.0.3.tgz"
@@ -4575,7 +4585,12 @@
     "whatwg-mimetype" "^2.3.0"
     "whatwg-url" "^8.0.0"
 
-"dayjs@^1.11.1", "dayjs@>= 1.x":
+"date-fns@^3.2.0", "date-fns@>= 2.x":
+  "integrity" "sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww=="
+  "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-3.6.0.tgz"
+  "version" "3.6.0"
+
+"dayjs@^1.11.1", "dayjs@^1.11.6", "dayjs@>= 1.x":
   "integrity" "sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA=="
   "resolved" "https://registry.npmjs.org/dayjs/-/dayjs-1.11.9.tgz"
   "version" "1.11.9"
@@ -5866,6 +5881,11 @@
     "has" "^1.0.3"
     "has-proto" "^1.0.1"
     "has-symbols" "^1.0.3"
+
+"get-node-dimensions@^1.2.1":
+  "integrity" "sha512-2MSPMu7S1iOTL+BOa6K1S62hB2zUAYNF/lV0gSVlOaacd087lc6nR1H1r0e3B1CerTo+RceOmi1iJW+vp21xcQ=="
+  "resolved" "https://registry.npmjs.org/get-node-dimensions/-/get-node-dimensions-1.2.1.tgz"
+  "version" "1.2.1"
 
 "get-own-enumerable-property-symbols@^3.0.0":
   "integrity" "sha512-I0UBV/XOz1XkIJHEUDMZAbzCThU/H8DxmSfmdGcKPnVhu2VfFqr34jr9777IyaTYvxjedWhqVIilEDsCdP5G6g=="
@@ -9565,6 +9585,15 @@
     "rc-resize-observer" "^1.0.0"
     "rc-util" "^5.36.0"
 
+"react-activity-calendar@^2.2.8":
+  "integrity" "sha512-+Zr6UlPC4zLMSkXyg/+bQ0Fd10E8V+nT+AU0FHfCIQi6/dLJe73cR+CkFFf8zPE59XhGO24U7FfUyFgbWqV0Bg=="
+  "resolved" "https://registry.npmjs.org/react-activity-calendar/-/react-activity-calendar-2.2.8.tgz"
+  "version" "2.2.8"
+  dependencies:
+    "@types/chroma-js" "^2.4.3"
+    "chroma-js" "^2.4.2"
+    "date-fns" "^3.2.0"
+
 "react-app-polyfill@^3.0.0":
   "integrity" "sha512-sZ41cxiU5llIB003yxxQBYrARBqe0repqPTTYBTmMqTz9szeBbE37BehCE891NZsmdZqqP+xWKdT3eo3vOzN8w=="
   "resolved" "https://registry.npmjs.org/react-app-polyfill/-/react-app-polyfill-3.0.0.tgz"
@@ -9607,7 +9636,7 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
-"react-dom@*", "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.0 || ^18.0.0", "react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>= 16.8.0", "react-dom@>=16.0.0", "react-dom@>=16.11.0", "react-dom@>=16.13", "react-dom@>=16.6.0", "react-dom@>=16.8", "react-dom@>=16.9.0", "react-dom@>=18.0":
+"react-dom@*", "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.0 || ^18.0.0", "react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>= 16.8.0", "react-dom@>=16.0.0", "react-dom@>=16.11.0", "react-dom@>=16.13", "react-dom@>=16.6.0", "react-dom@>=16.8", "react-dom@>=16.9.0", "react-dom@>=18.0", "react-dom@>0.13.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -9615,10 +9644,33 @@
     "loose-envify" "^1.1.0"
     "scheduler" "^0.23.0"
 
+"react-error-boundary@^4.0.12":
+  "integrity" "sha512-b6PwbdSv8XeOSYvjt8LpgpKrZ0yGdtZokYwkwV2wlcZbxgopHX/hgPl5VgpnoVOWd868n1hktM8Qm4b+02MiLQ=="
+  "resolved" "https://registry.npmjs.org/react-error-boundary/-/react-error-boundary-4.0.13.tgz"
+  "version" "4.0.13"
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+
 "react-error-overlay@^6.0.11":
   "integrity" "sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg=="
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   "version" "6.0.11"
+
+"react-github-calendar@^4.1.3":
+  "integrity" "sha512-Rs23t8dryIwKLIHk0Gm1ufCN5tZ17OxHrKu2on/Tm6IIytxtLB359KtLE02e6/f8bnjA1ZQjP2qWlxQlBsHLKw=="
+  "resolved" "https://registry.npmjs.org/react-github-calendar/-/react-github-calendar-4.1.3.tgz"
+  "version" "4.1.3"
+  dependencies:
+    "react-activity-calendar" "^2.2.8"
+    "react-error-boundary" "^4.0.12"
+
+"react-github-contribution-calendar@^2.2.0":
+  "integrity" "sha512-dTpKjsMX/9qyfPC24h3Y0yGxfoOCyp9xBcVvpRe5e98/ikcAW0oIaO6DLfB9byOdN9Y3wovcQ6fHupmZF8NdjA=="
+  "resolved" "https://registry.npmjs.org/react-github-contribution-calendar/-/react-github-contribution-calendar-2.2.0.tgz"
+  "version" "2.2.0"
+  dependencies:
+    "dayjs" "^1.11.6"
+    "react-measure" "^2.5.2"
 
 "react-icons@^4.10.1":
   "integrity" "sha512-/ngzDP/77tlCfqthiiGNZeYFACw85fUjZtLbedmJ5DTlNDIwETxhwBzdOJ21zj4iJdvc0J3y7yOsX3PpxAJzrw=="
@@ -9654,6 +9706,16 @@
   "integrity" "sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
   "version" "18.2.0"
+
+"react-measure@^2.5.2":
+  "integrity" "sha512-M+rpbTLWJ3FD6FXvYV6YEGvQ5tMayQ3fGrZhRPHrE9bVlBYfDCLuDcgNttYfk8IqfOI03jz6cbpqMRTUclQnaA=="
+  "resolved" "https://registry.npmjs.org/react-measure/-/react-measure-2.5.2.tgz"
+  "version" "2.5.2"
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    "get-node-dimensions" "^1.2.1"
+    "prop-types" "^15.6.2"
+    "resize-observer-polyfill" "^1.5.0"
 
 "react-pdf@^7.3.3":
   "integrity" "sha512-d7WAxcsjOogJfJ+I+zX/mdip3VjR1yq/yDa4hax4XbQVjbbbup6rqs4c8MGx0MLSnzob17TKp1t4CsNbDZ6GeQ=="
@@ -9769,7 +9831,7 @@
   dependencies:
     "debounce" "^1.2.1"
 
-"react@*", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.6 || ^17.0.0 || ^18.0.0", "react@^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>= 16.8.0", "react@>=16.0.0", "react@>=16.11.0", "react@>=16.13", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@>=16.9.0", "react@>=17.0", "react@>=18.0":
+"react@*", "react@^16 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.6 || ^17.0.0 || ^18.0.0", "react@^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>= 16.8.0", "react@>=16.0.0", "react@>=16.11.0", "react@>=16.13", "react@>=16.13.1", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@>=16.9.0", "react@>=17.0", "react@>=18.0", "react@>0.13.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -9960,7 +10022,7 @@
   "resolved" "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz"
   "version" "1.0.0"
 
-"resize-observer-polyfill@^1.5.1":
+"resize-observer-polyfill@^1.5.0", "resize-observer-polyfill@^1.5.1":
   "integrity" "sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg=="
   "resolved" "https://registry.npmjs.org/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz"
   "version" "1.5.1"

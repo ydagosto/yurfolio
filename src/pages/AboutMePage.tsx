@@ -2,7 +2,7 @@ import SkeuomorphSkill from "../components/SkeuomorphSkill";
 import "../styles.scss";
 import { FaReact } from "react-icons/fa";
 import { TbBrandCss3, TbBrandHtml5 } from "react-icons/tb";
-import { Typography } from "antd";
+import { Calendar, Typography } from "antd";
 import {
   SiTableau,
   SiApachehadoop,
@@ -19,6 +19,7 @@ import {
 import { BiLogoTypescript, BiLogoJavascript } from "react-icons/bi";
 import { AiOutlineConsoleSql } from "react-icons/ai";
 import { SiApachespark } from "react-icons/si";
+import ContributionsCalendar from "../components/ContributionsCalendar";
 const { Title } = Typography;
 
 const AboutMePage = () => {
@@ -55,6 +56,13 @@ const AboutMePage = () => {
           {skillNames.map((key: string) => (
             <SkeuomorphSkill label={key} logo={skills[key]} />
           ))}
+        </div>
+        <br></br>
+        <div>
+          <Title>Guitar Practice</Title>
+        </div>
+        <div>
+          <ContributionsCalendar />
         </div>
       </div>
     </div>
