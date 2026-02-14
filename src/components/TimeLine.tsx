@@ -6,7 +6,7 @@ import "../styles.scss";
 
 const items = [
   {
-    title: "Databricks - Metric Store Platform",
+    title: "Databricks - Data Platform",
     description: "Present - January 2025",
     icon: <SiDatabricks />,
   },
