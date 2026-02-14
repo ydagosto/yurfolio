@@ -9,6 +9,25 @@ import TagLine from "../components/TagLine";
 const { Title, Paragraph } = Typography;
 
 const experienceData: any = {
+  "Metric Store Platform": {
+    positions: [
+      {
+        title: "Software Engineer",
+        startDate: "January 2025",
+        endDate: "Present",
+      },
+    ],
+    company: "Databricks",
+    location: "San Francisco, CA",
+    startDate: "January 2025",
+    endDate: "Present",
+    bullets: [
+      "Led the design and delivery of multiple platform-level backend systems for Metric Store, a centralized analytics and data quality platform, owning end-to-end architecture, security, reliability, and long-term extensibility.",
+      "Built a reusable framework that transforms SQL-based definitions into automated, production-grade monitoring and alerting services, reducing manual operational work and improving reliability at scale.",
+      "Designed the architecture for an AI-powered internal support system integrated with Slack, validating secure real-time service communication patterns and establishing foundations for future AI tooling.",
+      "Developed developer tooling and test infrastructure that reduced iteration cycles from hours to minutes, removed reliance on production data, and significantly improved developer velocity and confidence.",
+    ],
+  },
   "GTM Data Science": {
     positions: [
       {
@@ -27,13 +46,13 @@ const experienceData: any = {
     startDate: "November 2021",
     endDate: "Present",
     bullets: [
-      "Improved company-wide bookings and revenue source of truth data freshness by more than 50% (from 13 hours to 6 hours). Thus enabling faster and more accurate decision-making for the business by successfully leading a complex migration (owning planning, design, prototyping, dev, comms with 5+ teams) of data transformation pipelines for SaaS booking data from on-prem HDFS systems to Azure utilizing ADLS, Databricks, Data Factory, and Great Expectations.",
-      "Pioneered the use of Azure infrastructure for data transformations at LinkedIn. Worked closely with the platform team to address the gaps in the stack and create a highly performant and scalable data transformation platform to achieve freshness needs of 50% improvement.",
-      "Brought transparency and accountability to the relationship between data consumers and producers by creating a framework that views Data teams at LinkedIn as effective service providers with obligations towards internal consumers. The framework standardizes the use of uptime as a measure to establish data reliability Service Level Agreements (SLA) by quantifying and documenting in standard format (JSON) consumer expectations around Freshness, Data Quality, and Availability.",
-      "Led the implementation of a scalable system to observe uptime for datasets against their reliability SLAs hourly. The system included easy contract onboarding in JSON format, dashboards to view real-time uptime and historical performance, alerting system to send emails or Slack messages to on-call channels in case of service-level breaches.",
-      "Built an internal application (DataMeter) to gather and display all health (availability, quality, open Jira issues) and usage (daily queries, and users) information relative to datasets at LinkedIn. The project involved building an hourly Spark job to retrieve the data, mid-tier API endpoints to serve data, and building a React front-end layer to display the data. This tool has become the one-stop shop for data health monitoring for our greater team, helping on-call identify issues sooner and promoting trust in our datasets with our consumers.",
-      "Led the socialization and adoption of DataMeter across the company, scaling from hundreds of datasets tracked in tens of thousands within a couple of months.",
-      "image-source:https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTFhY3h3aXNtM3J5aDZxNW14NXdtd2w5eWRxdWcxdGYzbmt3cDhiaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aDAENghU4ww4iKW2rV/giphy.gif",
+      "Improved source-of-truth bookings and revenue data freshness by over 50% (13 hours to 6 hours), enabling faster and more accurate GTM decisions.",
+      "Led end-to-end migration of SaaS booking pipelines from on-prem HDFS to Azure (ADLS, Databricks, Data Factory, Great Expectations), coordinating planning, design, prototyping, implementation, and cross-team execution with 5+ partner teams.",
+      "Pioneered Azure-based transformations at LinkedIn by partnering with platform teams to close stack gaps and build a scalable, high-performance processing foundation.",
+      "Designed a reliability SLA framework that formalized consumer expectations for freshness, quality, and availability through standardized JSON contracts.",
+      "Implemented an hourly SLA observability system with contract onboarding, real-time and historical dashboards, and automated email/Slack alerts for breach detection.",
+      "Built DataMeter, an internal platform that unified dataset health (availability, quality, open Jira issues) and usage metrics (daily queries and users) through hourly Spark pipelines, API services, and a React UI.",
+      "Drove DataMeter adoption across the company, scaling coverage from hundreds of datasets to tens of thousands within months.",
     ],
   },
   "Market Research": {
@@ -54,14 +73,13 @@ const experienceData: any = {
     startDate: "July 2019",
     endDate: "November 2021",
     bullets: [
-      "Significantly improved data readiness for NPS reports for the Flagship and Recruiter products from quarterly to monthly and then weekly by using Azkaban scheduler to orchestrate  Presto/Hive (SQL), and Spark (Scala) jobs and allowing our product managers and analysts to get closer to real-time feedback from users",
-      "Developed Apache Gobblin data integration applications to extract and ingest survey data from external APIs (Qualtrics, Decipher) to internal HDFS storage making it available company-wide for market analysis",
-      "Improved survey fielding efficiency (from 10 surveys/associate to 30+ surveys/associate) by developing an internal web application using Flask and Ember.js to assist with manual steps. These include generating audience tables for survey targeting and monitoring fielding stats as batches of emails are sent",
-      "image-source:https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzV0d2ZjczB4MmR6YmdwOGlvd252YXhiYm5zOTJwazc0ZXFvbmR6dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/asUGoLQFIHxtK4W0I6/giphy.gif",
-      "Led an effort to standardize data operations across programs by redesigning specialized code to use modular and reusable components, reducing the amount of code to maintain and increasing its longevity",
-      "Pioneered team’s adoption of new technologies (Spark) to fully automate the survey reporting workflow including multivariate weighting to ensure the survey sample accurately represents the demographic profile of the LinkedIn population, statistical significance for change in survey scores across periods and groups, waterfall analysis to show the drivers of change in NPS (Net Promoter Score) over time",
-      "Built and maintained interactive Tableau dashboards for analysts to explore survey datasets (including Flagship NPS and CSAT for Recruiter products) on a self-serve basis and drive product decision making",
-      "Roadmapped initiatives with realistic short and long-term targets to ensure programs’ growth and success",
+      "Improved NPS data readiness for Flagship and Recruiter from quarterly to monthly and then weekly by orchestrating Presto/Hive SQL and Spark Scala jobs with Azkaban.",
+      "Developed Apache Gobblin integrations to ingest survey data from Qualtrics and Decipher APIs into HDFS, making data broadly accessible for company-wide analysis.",
+      "Increased survey fielding efficiency from 10 to 30+ surveys per associate by building internal workflow tooling with Flask and Ember.js for audience-table generation and send monitoring.",
+      "Standardized data operations across programs by refactoring specialized code into modular, reusable components, reducing maintenance overhead and improving long-term scalability.",
+      "Led team adoption of Spark to automate survey reporting workflows including multivariate weighting, significance testing across periods and cohorts, and NPS waterfall driver analysis.",
+      "Built and maintained self-serve Tableau dashboards for Flagship NPS and Recruiter CSAT, enabling faster analyst exploration and product decision-making.",
+      "Defined and roadmapped short- and long-term initiatives to support sustained program growth and delivery predictability.",
     ],
   },
   "Equity Research": {
@@ -82,15 +100,15 @@ const experienceData: any = {
     startDate: "July 2017",
     endDate: "July 2019",
     bullets: [
-      "Led initiative to modernize data pipeline by migrating from PostgreSQL to Apache Spark and python",
-      "Streamlined and optimized the method to query and aggregate data, allowing it to process multiple parameters simultaneously and achieve substantial efficiency gains (from 9 hours per run to 1 hour)",
-      "Used PySpark to query and analyze credit card data for roughly 4 million users and develop statistical models forecasting companies’ quarterly operational metrics consistently below a 2% standard error rate",
-      "Utilized Python for customer behavioral analytics and segmentation techniques to discover actionable insights and evaluate the underlying economics of a business. This includes categorizing observations to understand revenue drivers on a product level and behavioral analysis to study customer engagement",
-      "Used Power Pivot to query CSV files and pivot tables to present results effectively in Excel dashboards",
-      "Wrote and published extensive and actionable quarterly company performance updates on e-commerce stocks to explain their short and long term financial outlook, using bias-free language and visuals",
-      "Explored, evaluated, and onboarded new datasets that were previously deemed irrelevant, such as web traffic data, and developed new methods to combine datasets such as credit card, email receipt, and web-scraping data to increase granularity or track companies’ key performance indicators",
-      "Used Bokeh and Databricks visualization tools to create interactive dashboards for data quality assurance",
-      "Onboarded and helped manage a team of 4 to support an analyst in regular maintenance of datasets and road mapping development of new products",
+      "Led pipeline modernization by migrating core workflows from PostgreSQL to Apache Spark and Python.",
+      "Reduced end-to-end processing time from 9 hours to 1 hour by redesigning query and aggregation logic to support simultaneous multi-parameter computation.",
+      "Analyzed credit card data for approximately 4 million users in PySpark and built forecasting models for quarterly company metrics with standard error consistently below 2%.",
+      "Applied Python-based customer segmentation and behavioral analysis to identify revenue drivers and evaluate business unit economics.",
+      "Built Excel reporting workflows using Power Pivot and pivot tables to communicate findings to stakeholders.",
+      "Authored quarterly performance research on e-commerce companies, translating complex data into clear short- and long-term outlooks.",
+      "Expanded data coverage by onboarding non-traditional sources such as web traffic and combining credit card, email receipt, and web-scraped datasets to improve KPI visibility.",
+      "Built interactive Bokeh and Databricks dashboards for data quality validation and issue triage.",
+      "Onboarded and helped manage a team of 4 supporting dataset maintenance and roadmap execution for new research products.",
     ],
     images: [],
   },
@@ -168,12 +186,13 @@ const Resume = () => {
               About Me
             </Title>
             <Paragraph className="about-me-text">
-              I'm a Data Engineer with experience leveraging big data in both a
-              startup environment and a large-scale business. Currently building
-              scalable and automated data ETL and visualization solutions used
-              to drive decisions at all levels, and previously conducting
-              consumer data analysis to address near-term concerns and thematic
-              trends in the e-Commerce sector.
+              Software engineer focused on scalable data and platform systems
+              across high-growth startups and large enterprise environments.
+              I design reliable backend services, data pipelines, and analytics
+              products that improve decision speed, operational efficiency, and
+              data trust. My background spans platform engineering, GTM data
+              engineering, market research automation, and equity research
+              analytics.
             </Paragraph>
           </div>
           <div>
