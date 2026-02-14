@@ -1,5 +1,4 @@
-import { Avatar, Typography } from "antd";
-import { FaUser } from "react-icons/fa";
+import { Typography } from "antd";
 
 const { Title, Text } = Typography;
 
@@ -13,7 +12,7 @@ const TagLine = () => {
         Yuri D'Agosto
       </Title>
       <Title level={5} className="title">
-        Senior Data Engineer
+        Software Engineer
       </Title>
       <Text type="secondary">ydagosto@gmail.com</Text>
       <Text type="secondary">(541)913-9585</Text>

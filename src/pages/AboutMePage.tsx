@@ -2,7 +2,7 @@ import SkeuomorphSkill from "../components/SkeuomorphSkill";
 import "../styles.scss";
 import { FaReact } from "react-icons/fa";
 import { TbBrandCss3, TbBrandHtml5 } from "react-icons/tb";
-import { Calendar, Typography } from "antd";
+import { Typography } from "antd";
 import {
   SiTableau,
   SiApachehadoop,

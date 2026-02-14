@@ -1,7 +1,7 @@
 import { Typography } from "antd";
 import TimeLine from "../components/TimeLine";
 import ExperienceItem from "../components/ExperienceItem";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "../styles.scss";
 import EducationItem from "../components/EducationItem";
 import TagLine from "../components/TagLine";
@@ -9,7 +9,7 @@ import TagLine from "../components/TagLine";
 const { Title, Paragraph } = Typography;
 
 const experienceData: any = {
-  "Metric Store Platform": {
+  "Data Platform": {
     positions: [
       {
         title: "Software Engineer",
@@ -115,17 +115,15 @@ const experienceData: any = {
 };
 
 const Resume = () => {
-  const infoArray = Array.from(
-    document.querySelectorAll(".resume-section")
-  ).map((h1) => h1.textContent);
-
   const [timelinePointer, setTimelinePointer] = useState(0);
-  const [loaded, setLoaded] = useState(false);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
+    const infoArray = Array.from(
+      document.querySelectorAll(".resume-section")
+    ).map((h1) => h1.textContent);
+
     let maxCurrentVisible: any;
     const htmlElements = document.querySelectorAll(".resume-section");
-    console.log(htmlElements);
     const pageTurn = window.innerHeight - window.innerHeight / 3;
 
     htmlElements.forEach((card) => {
@@ -141,18 +139,14 @@ const Resume = () => {
       }
     });
     setTimelinePointer(maxCurrentVisible);
-  };
+  }, []);
 
   useEffect(() => {
-    if (!loaded) {
-      setLoaded(true);
-    } else {
-      window.addEventListener("scroll", handleScroll);
-    }
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [loaded]);
+  }, [handleScroll]);
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
