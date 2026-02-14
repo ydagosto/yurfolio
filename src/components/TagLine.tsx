@@ -14,8 +14,9 @@ const TagLine = () => {
       <Title level={5} className="title">
         Software Engineer
       </Title>
+      <Text className="title">Data Platform</Text>
       <Text type="secondary">ydagosto@gmail.com</Text>
-      <Text type="secondary">(541)913-9585</Text>
+      <Text type="secondary">(541) 913-9585</Text>
     </div>
   );
 };

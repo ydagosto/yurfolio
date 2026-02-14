@@ -58,14 +58,16 @@ const EducationItem = (props: any) => {
             <li>Departmental Honors - Economics</li>
             <li>
               {"Economics Honors Thesis: "}
-              <button
-                type="button"
-                onClick={showModal}
+              <a
+                href="#thesis"
+                onClick={(e) => {
+                  e.preventDefault();
+                  showModal();
+                }}
                 className="link-button"
-                style={{ background: "none", border: "none", padding: 0 }}
               >
                 Ports and Emissions from Shipping
-              </button>
+              </a>
               <Modal
                 title="Ports and Emissions from Shipping"
                 open={visible}
