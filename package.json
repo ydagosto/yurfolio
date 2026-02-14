@@ -20,7 +20,6 @@
     "@types/node": "^16.18.39",
     "@types/three": "^0.156.0",
     "antd": "^5.8.6",
-    "node-sass": "^7.0.3",
     "pdfjs-dist": "^3.10.111",
     "react": "^18.2.0",
     "react-activity-calendar": "^2.2.8",
