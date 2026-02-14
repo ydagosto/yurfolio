@@ -1,13 +1,18 @@
 import { Steps } from "antd";
 import { LinkedinOutlined, LineChartOutlined } from "@ant-design/icons";
-import { FaGraduationCap, FaCircle } from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
+import { SiDatabricks } from "react-icons/si";
 import "../styles.scss";
-import { useState, useEffect } from "react";
 
 const items = [
   {
+    title: "Databricks - Metric Store Platform",
+    description: "Present - January 2025",
+    icon: <SiDatabricks />,
+  },
+  {
     title: "LinkedIn - GTM Data Science",
-    description: "Present - November 2021",
+    description: "January 2025 - November 2021",
     icon: <LinkedinOutlined />,
   },
   {
@@ -17,7 +22,7 @@ const items = [
   },
   {
     title: "MScience - Equity Research",
-    description: "July 2019 - April 2017",
+    description: "July 2019 - July 2017",
     icon: <LineChartOutlined />,
   },
   {
