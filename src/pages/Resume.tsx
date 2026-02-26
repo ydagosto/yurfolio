@@ -35,7 +35,7 @@ const experienceData: any = {
       {
         title: "Senior Data Engineer",
         startDate: "March 2023",
-        endDate: "Present",
+        endDate: "January 2025",
       },
       {
         title: "Data Engineer",
@@ -46,7 +46,7 @@ const experienceData: any = {
     company: "LinkedIn",
     location: "San Francisco, CA",
     startDate: "November 2021",
-    endDate: "Present",
+    endDate: "January 2025",
     bullets: [
       "Improved source-of-truth bookings and revenue data freshness by over 50% (13 hours to 6 hours), enabling faster and more reliable GTM decision-making.",
       "Led the end-to-end migration of critical SaaS booking pipelines from on-prem HDFS to Azure (ADLS, Databricks, Data Factory, Great Expectations), owning planning, system design, prototyping, implementation, and cross-team execution across 5+ partner teams.",
